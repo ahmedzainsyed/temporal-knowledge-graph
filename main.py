@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+neo4j
+kafka-python
+redis
+celery
+torch
+torch-geometric
+numpy
+pandas
+qdrant-client
+pytest
+httpx
+pydantic

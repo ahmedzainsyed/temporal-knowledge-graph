@@ -1,0 +1,137 @@
+# Temporal Knowledge Graph with Event-Sourced State Reconstruction
+
+## Overview
+
+This repository contains a production-grade distributed Temporal Knowledge Graph platform designed for large-scale historical state reconstruction, temporal relationship modeling, graph traversal, and embedding-based prediction systems.
+
+The system supports:
+
+- Immutable event sourcing
+- Timestamp-level state reconstruction
+- Temporal graph analytics
+- Multi-hop traversal
+- Link prediction
+- Embedding generation
+- Real-time ingestion pipelines
+- Distributed microservices
+- Kubernetes deployment
+- CI/CD automation
+- Monitoring and observability
+
+---
+
+# Key Features
+
+## Event Sourcing
+
+Every entity change is stored as an immutable event.
+
+Benefits:
+- Full auditability
+- Replayability
+- Historical debugging
+- Time-travel queries
+
+## Temporal Reconstruction
+
+Reconstruct any entity state at any timestamp.
+
+Example:
+- User profile before fraud incident
+- Shipment state before delay
+- Account balance before transfer
+
+## Temporal Knowledge Graph
+
+Relationships evolve over time.
+
+Examples:
+- User changes organization
+- Device ownership changes
+- Transaction paths evolve
+
+## Graph Embeddings
+
+Temporal embeddings improve:
+- Link prediction
+- Recommendation systems
+- Fraud detection
+- Anomaly detection
+
+---
+
+# High-Level Architecture
+
+Frontend → API Gateway → Kafka → Event Processors → Neo4j → Embedding Engine → Qdrant
+
+---
+
+# Repository Structure
+
+```text
+Temporal-Knowledge-Graph-Detailed/
+│
+├── backend/
+├── frontend/
+├── infrastructure/
+├── docs/
+├── scripts/
+├── datasets/
+├── monitoring/
+├── notebooks/
+└── .github/
+```
+
+---
+
+# Quick Start
+
+## Docker Deployment
+
+```bash
+docker-compose up --build
+```
+
+## Backend
+
+```bash
+cd backend
+uvicorn app.main:app --reload
+```
+
+## Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+# Performance Targets
+
+| Metric | Target |
+|---|---|
+| Query Latency | <100ms |
+| Event Throughput | 50K+/sec |
+| Events Supported | 2M+ |
+| Availability | 99.9% |
+| Link Prediction Gain | +21% |
+
+---
+
+# Technologies
+
+| Layer | Tech |
+|---|---|
+| Backend | FastAPI |
+| Streaming | Kafka |
+| Graph DB | Neo4j |
+| Vector DB | Qdrant |
+| ML | PyTorch Geometric |
+| Cache | Redis |
+| Frontend | Next.js |
+| Infra | Docker + Kubernetes |
+| Monitoring | Prometheus + Grafana |
+| CI/CD | GitHub Actions |

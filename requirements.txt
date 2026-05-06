@@ -1,0 +1,47 @@
+version: '3.9'
+
+services:
+
+  api:
+    build: ./backend
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      - neo4j
+      - kafka
+      - redis
+      - qdrant
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+
+  neo4j:
+    image: neo4j:5
+
+    environment:
+      NEO4J_AUTH: neo4j/password
+
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+
+  kafka:
+    image: bitnami/kafka:latest
+
+    ports:
+      - "9092:9092"
+
+  redis:
+    image: redis:7
+
+    ports:
+      - "6379:6379"
+
+  qdrant:
+    image: qdrant/qdrant
+
+    ports:
+      - "6333:6333"
